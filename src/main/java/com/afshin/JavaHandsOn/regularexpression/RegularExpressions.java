@@ -1,11 +1,11 @@
-package com.afshin.JavaHandsOn;
+package com.afshin.JavaHandsOn.regularexpression;
 
 import java.util.regex.Pattern;
 
 /**
  * This class includes practices on regular expressions.
  */
-class RegularExpressions {
+public class RegularExpressions {
     private static final String juneString = ".*june.*";
     private static final String julyString = ".*july.*";
 
@@ -13,21 +13,21 @@ class RegularExpressions {
     private static final Pattern julyPattern = Pattern.compile(julyString);
     private static final Pattern juneOrJulyPattern = Pattern.compile(juneString + "|" + julyString);
 
-    void run() {
+    public void run() {
         String expr1 = "123june";
 
         System.out.println(
-            junePattern.pattern() + " matches with " + expr1 +" -> " +
+            junePattern.pattern() + " matches with " + expr1 + " -> " +
                 singleMatch(junePattern, expr1)
         );
 
         System.out.println(
-            julyPattern.pattern() + " matches with " + expr1 +" -> " +
+            julyPattern.pattern() + " matches with " + expr1 + " -> " +
                 singleMatch(julyPattern, expr1)
         );
 
         System.out.println(
-            juneOrJulyPattern.pattern() + " matches with " + expr1 +" -> " +
+            juneOrJulyPattern.pattern() + " matches with " + expr1 + " -> " +
                 singleMatch(juneOrJulyPattern, expr1)
         );
 
